@@ -1,8 +1,7 @@
-let tab = function() {
-    let tabNav = document.querySelectorAll('.tab_nav'),
-          tabContent = document.querySelectorAll('.tab'),
-          tabName;
-
+const tab = function() {
+    const tabNav = document.querySelectorAll('.tab_nav'),
+          tabContent = document.querySelectorAll('.tab');
+        
     tabNav.forEach(item => {
         item.addEventListener('click', selectTabNav)
     });
@@ -10,22 +9,20 @@ let tab = function() {
     function selectTabNav() {
        //console.log(this)
         tabNav.forEach(item => {
-            item.classList.remove('.active');
+            item.classList.remove('active');
         });
 
-        this.classList.add('.active');
-        tabName = this.getAttribute('data-id');
+        this.classList.add('active');
+        const tabName = this.getAttribute('data-id');
        // console.log(tabName);
         selectTabContent(tabName);
     }
 
     function selectTabContent(tabName) {
         tabContent.forEach(item => {
-            item.classList.contains(tabName) ? item.classList.add('.active') : item.classList.remove('.active');
+            item.classList.contains(tabName)? item.classList.add('active'): item.classList.remove('active') ;
         });
-
-
-    };
+    }
 
 };
 

@@ -30,16 +30,17 @@ body{
     border-radius: 5px;
 }
 
-.my-tabs .tabs__content  {
+.my-tabs .tabs__content{
     list-style: none;
     padding: 20px; 
+    
 }
 
-.my-tabs .tabs__content .tab{
+.my-tabs .tabs__content  li{
     display: none;
 }
 
-.my-tabs .tabs__content .tab .active{
+.my-tabs .tabs__content  li.active{
     display: block;
 }
 
